@@ -1,4 +1,4 @@
---turtle pita pozicije
+--turtle asks for directions
 print('How many blocks in A direction?')
 X=io.read()
 print('How many blocks right?')
