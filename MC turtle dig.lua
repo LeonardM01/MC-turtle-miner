@@ -1,18 +1,18 @@
 --turtle pita pozicije
-print('Koliko blockova naprijed?')
+print('How many blocks in A direction?')
 X=io.read()
-print('Koliko blockova desno?')
+print('How many blocks right?')
 Y=io.read()
 print('Koliko blockova desno?')
 Z=io.read()
-print('Upisi isti ko i za broj blockova desno')
+print('Put in the same number as the last one!')
 Q=io.read()
 
 
---turtle refuel komanda
+--turtle refuel command
 repeat
     
---petlja sa ponavljanjem kopanja
+--loop for repeating digging
     local Main
     if Q~=0 then
         A=X
@@ -31,7 +31,7 @@ repeat
     
         end
  
---kopanje ravno      
+--mining straigh      
         while A~=0 do
             turtle.digUp()
             turtle.dig()
@@ -39,7 +39,7 @@ repeat
             turtle.forward()
             A=A-1
         end
---provjera izbacivanja cobblestonea
+--dumping cobblestone
 
             turtle.select(14)
             if turtle.compareTo(1)==true then
@@ -111,7 +111,7 @@ repeat
         
         turtle.turnRight()
  
---kopanje desno
+--mining right
         
         while B~=0 do
             turtle.digUp()            
@@ -120,7 +120,7 @@ repeat
             turtle.forward()
             B=B-1
         end
---provjera izbacivanja cobblestonea
+--dumping cobblestone
 
             turtle.select(14)
             if turtle.compareTo(1)==true then
@@ -192,7 +192,7 @@ repeat
         
         turtle.turnRight()
         
---kopanje desno   
+--mining right   
         
         while C~=0 do
             turtle.digUp()
@@ -201,7 +201,7 @@ repeat
             turtle.forward()
             C=C-1
         end
---provjera izbacivanja cobblestonea
+--dumbing cobblestone
 
             turtle.select(14)
             if turtle.compareTo(1)==true then
@@ -275,7 +275,7 @@ repeat
                 
         C=Z-1
         
---kopanje do pocetka -1  
+--mining from the start point just one block inwards  
         while C~=0 do
             turtle.digUp()
             turtle.dig()
@@ -283,7 +283,7 @@ repeat
             turtle.forward()
             C=C-1
         end
---provjera izbacivanja cobblestonea
+--dumping cobblestone
 
             turtle.select(14)
             if turtle.compareTo(1)==true then
